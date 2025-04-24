@@ -1,0 +1,119 @@
+// .task-card {
+//     border: 2px dashed rgba(255, 255, 255, 0.4);
+//     border-radius: 8px;
+//     padding: 0.75rem;
+//     margin-top: 1rem;
+//     cursor: pointer;
+//     transition: all 0.3s ease;
+//     background-color: transparent;
+//     font-size: 0.9rem;
+  
+//     &.pomodoro {
+//       background-color: #cb4c47;
+//     }
+  
+//     &.short-break {
+//       background-color: #4c7c99;
+//     }
+  
+//     &.long-break {
+//       background-color: #457ca1;
+//     }
+  
+//     .task-placeholder {
+//       text-align: center;
+//       color: white;
+//       font-weight: 500;
+//       font-size: 1rem;
+//     }
+  
+//     .task-form {
+//       textarea {
+//         width: 100%;
+//         height: 60px; // kamaytirildi
+//         font-size: 0.9rem; // kamaytirildi
+//         font-style: italic;
+//         padding: 8px;
+//         resize: none;
+//         border-radius: 6px;
+//         border: none;
+//         outline: none;
+//       }
+  
+//       .pomodoro-input {
+//         margin-top: 0.75rem;
+  
+//         label {
+//           font-weight: 500;
+//           margin-bottom: 4px;
+//           display: block;
+//           font-size: 0.85rem;
+//         }
+  
+//         .pomodoro-control {
+//           input {
+//             width: 50px;
+//             padding: 4px;
+//             font-size: 0.9rem;
+//             border-radius: 4px;
+//             border: none;
+//           }
+//         }
+//       }
+  
+//       .buttons {
+//         margin-top: 0.75rem;
+//         display: flex;
+//         justify-content: flex-end;
+//         gap: 8px;
+  
+//         .cancel {
+//           background-color: transparent;
+//           border: none;
+//           color: white;
+//           font-weight: 500;
+//           font-size: 0.85rem;
+//           cursor: pointer;
+//         }
+  
+//         .save {
+//           background-color: black;
+//           color: white;
+//           padding: 4px 10px;
+//           border-radius: 5px;
+//           border: none;
+//           cursor: pointer;
+//           font-size: 0.85rem;
+//         }
+//       }
+//     }
+//   }
+  
+//   .task-input-card {
+//     padding: 0.75rem; // oldingi 1rem edi
+//     border-radius: 0.5rem; // oldingi 0.75rem edi
+//     gap: 0.75rem; // oldingi 1rem edi
+  
+//     textarea {
+//       min-height: 40px; // 60px dan kichikroq
+//       font-size: 0.9rem; // 1rem dan kichikroq
+//     }
+  
+//     .counter {
+//       button {
+//         font-size: 1rem; // oldingi 1.2rem edi
+//       }
+  
+//       span {
+//         font-size: 1rem;
+//       }
+//     }
+  
+//     .actions {
+//       button {
+//         padding: 0.3rem 0.8rem;
+//         font-size: 0.9rem;
+//       }
+//     }
+//   }
+  

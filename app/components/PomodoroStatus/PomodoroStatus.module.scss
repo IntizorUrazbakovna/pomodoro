@@ -1,0 +1,182 @@
+.pomodoroContainer {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.3s ease;
+  border-top: 2.5px solid white;
+  width: 500px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-left: 370px;
+  
+
+  .stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+
+  .pomosCount {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  
+  }
+
+  .finishTime {
+    opacity: 0.7; 
+    font-size: 1rem;
+    
+  }
+}
+
+
+  &.pomodoro {
+    background-color: #d95550;
+  }
+
+  &.shortBreak {
+    background-color: #4c9195;
+  }
+
+  &.longBreak {
+    background-color: #457ca3;
+  }
+}
+
+.modeTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.timerDisplay {
+  font-size: 8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &.startBtn {
+      background-color: white;
+      color: #d95550;
+    }
+
+    &.pauseBtn {
+      background-color: white;
+      color: #4c9195;
+    }
+
+    &.resetBtn {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+  }
+}
+.statusItem{
+  color: rgba(255, 255, 255, 0.776);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 20px;
+  justify-content: space-around;
+  .value{
+    color: white;
+    font-size: 26px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .pomodoroContainer {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+    gap: 12px;
+  }
+
+  .statusItem {
+    justify-content: space-between;
+    width: 100%;
+    font-size: 18px;
+
+    .value {
+      font-size: 22px;
+    }
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .timerDisplay {
+    font-size: 5rem;
+  }
+
+  .modeTitle {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .pomodoroContainer {
+    width: 100%;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .statusItem {
+    font-size: 16px;
+
+    .value {
+      font-size: 20px;
+    }
+  }
+
+  .timerDisplay {
+    font-size: 4rem;
+  }
+
+  .modeTitle {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .controls button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}

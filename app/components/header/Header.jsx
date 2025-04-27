@@ -2,57 +2,58 @@
 
 import { useState } from 'react';
 import Image from "next/image";
-import styles from '../header/Header.scss'; // SCSS fayling ishlatilsa
+import styles from './Header.module.scss';
+import SettingsModal from '../SettingsModal/SettingsModal';
 
-
-
-
-
-export default function Header() {
+export default function Header({ setTimes }) {
   const [showSettings, setShowSettings] = useState(false);
 
   const handleConfigClick = () => setShowSettings(true);
   const handleCloseModal = () => setShowSettings(false);
 
-
+  const handleSaveSettings = (newTimes) => {
+    setTimes(newTimes);
+    setShowSettings(false);
+  };
 
   return (
     <>
-      <header className="header container">
-        <div className="logo">
-          <span className="check">
-            <Image src="/logo.png" alt="Logo" width={20} height={20} />
-          </span>
-          <h3 className="text">Pomofocus</h3>
+      <header className={`${styles.header} container`}>
+        <div className={styles.left}>
+          <Image src="/logo.png" alt="Pomofocus" width={30} height={30} />
+          <span>Pomofocus</span>
         </div>
 
-        <div className="actions">
-          <ul className="nav-menu-list">
-            <li className="nav-menu-item">
-              <Image src="/graph.png" alt="Graph" width={16} height={16} />
-              <p className="item-text">Report</p>
-            </li>
-
-            <li className="nav-menu-item" onClick={handleConfigClick} style={{ cursor: 'pointer' }}>
-              <Image src="/config.png" alt="Config" width={16} height={16} />
-              <p className="item-text">Config</p>
-            </li>
-
-            <li className="nav-menu-item">
-              <Image src="/user.png" alt="User" width={16} height={16} />
-              <p className="item-text">Sign In</p>
-            </li>
-
-            <li className="nav-menu-item">
-              <Image src="/three.png" alt="More" width={16} height={16} />
-            </li>
-          </ul>
+        <div className={styles.right}>
+          <button className={styles.button}>
+            <Image src="/graph.png" alt="Report" width={20} height={20} />
+            Report
+          </button>
+          <button className={styles.button} onClick={handleConfigClick}>
+            <Image src="/config.png" alt="Config" width={20} height={20} />
+            Config
+          </button>
+          <button className={styles.button}>
+            <Image src="/user.png" alt="Sign in" width={20} height={20} />
+            Sign in
+          </button>
+          <button className={styles.button}>
+            <Image src="/three.png" alt="Menu" width={20} height={20} />
+          </button>
         </div>
       </header>
 
- 
+      {showSettings && (
+        <SettingsModal
+          onClose={handleCloseModal}
+          onSave={handleSaveSettings}
+        />
+      )}
     </>
   );
 }
+
+
+
 
 
